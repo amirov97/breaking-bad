@@ -4,9 +4,8 @@ const Search = (props) =>{
 
     const [text ,setText] = useState('')
     const onChangeHandler = (e) =>{
-        console.log(e.target.value)
         setText(e.target.value)
-        props.getQuery(text)
+        props.getQuery(e.target.value)
     }
 
     return(

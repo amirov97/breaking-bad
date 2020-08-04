@@ -4,8 +4,8 @@ const Search = (props) =>{
 
     const [text ,setText] = useState('')
     const onChangeHandler = (e) =>{
-        setText(e.target.value)
-        props.getQuery(e.target.value)
+        setText(e)
+        props.getQuery(e)
     }
 
     return(
@@ -16,7 +16,7 @@ const Search = (props) =>{
                     className='form-control'
                     placeholder='Search characters ...'
                     value={text}
-                    onChange={onChangeHandler}
+                    onChange={e=>onChangeHandler(e.target.value)}
                     autoFocus/>
             </form>
         </section>
